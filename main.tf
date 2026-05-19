@@ -11,11 +11,11 @@ provider "aws" {
   region = "ap-south-1" # Mumbai Region
 }
 
-resource "aws_instance" "my_server" {
-  ami           = "ami-03f4878755434977f" # Ha ap-south-1 madhla standard Amazon Linux 3 AMI ID aahe
+resource "aws_instance" "devops_server" {
+  ami           = "ami-03f4878755434977f" # Amazon Linux 3 AMI ID
   instance_type = "t2.micro"
 
   tags = {
-    Name = "Jenkins-Created-EC2"
+    Name = "Terraform-Launched-By-Jenkins"
   }
 }

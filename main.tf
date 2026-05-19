@@ -1,21 +1,12 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.0"
-    }
-  }
-}
-
 provider "aws" {
-  region = "ap-south-1" # Mumbai Region
+  region = "ap-south-1" 
 }
 
-resource "aws_instance" "devops_server" {
-  ami           = "ami-03f4878755434977f" # Amazon Linux 3 AMI ID
+resource "aws_instance" "my_jenkins_server" {
+  ami           = "ami-007020fd9c84617ee" 
   instance_type = "t2.micro"
 
   tags = {
-    Name = "Terraform-Launched-By-Jenkins"
+    Name = "Terraform-Jenkins-EC2"
   }
 }
